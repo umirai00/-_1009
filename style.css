@@ -1,0 +1,425 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* アウトライン可視化 */
+/* * {outline: 1px solid rgb(255, 202, 255);} */
+
+@media screen and (min-width: 960px) {
+  header {
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 2;
+  }
+  .header-inner {
+    background-color: rgb(154, 154, 154 0.5);
+    -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 5px 10px rgba(255, 11, 13, .2);
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    height: 50px;
+    margin: 10px 30px;
+  }
+  .jump {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .jump_icon {
+    display: flex;
+    margin: 0 10px;
+  }
+
+  .sns_img {
+    height: 20px;
+  }
+
+  .glovalNav {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 8px 0;
+  }
+  
+  .glovalNav li {
+    display: flex;
+    margin: 0 15px 0px 15px;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    font-size: 10px;
+    transition-duration: 0.5s;
+  }
+
+  .glovalNav li :hover {
+    /* background-color: #ff0b0d; */
+    /* color: #ffffff; */
+    opacity: .6;
+    scale: 1.1;
+  }
+
+  .section-wrapper {
+    padding: 160px 0 0 0;
+    position: relative;
+  }
+
+
+  .section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-feature-settings: "palt";
+    letter-spacing: 0.35rem;
+  }
+
+  /* CONTENTS CONTENTS CONTENTS CONTENTS */
+  .kashi {
+    box-shadow: 5px 5px 10px 0 #b8b8b8;
+    margin: 0 0 80px 0;
+    padding: 30px 20px;
+    position: relative;
+  }
+
+  h4 {
+    font-size: 17px;
+    font-family: serif;
+    margin: 0 0 100px 0;
+    font-feature-settings: "palt";
+    letter-spacing: 0.13rem;
+  }
+
+  h5 {
+    font-size: 12px;
+    margin: 0;
+    font-weight: lighter;
+    font-feature-settings: "palt";
+    letter-spacing: 0.13rem;
+    color: #353535;
+    line-height: 1.4;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .youtube {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 500px;
+    height: 281px;
+  }
+
+  .left div {
+    margin-right: 40px;
+  }
+  /* CONTENTS CONTENTS CONTENTS CONTENTS */
+
+  /* PICTURES PICTURES PICTURES PICTURES */
+  .resize {
+    padding: 0 10%;
+  }
+
+  .font-size {
+    font-size: 0;
+  }
+
+  .pic {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition-duration: 0.5s;
+  }
+
+  .pic img:hover {
+    transform: scale(1.2);
+  }
+
+  /* PICTURES PICTURES PICTURES PICTURES */
+  /* JACKET JACKET JACKET JACKET  */
+  .art {
+    display: flex;
+    border-radius: 100%;
+    margin: auto;
+    transition-duration: 0.5s;
+  }
+
+  .art:hover {
+    scale: 0.9;
+  }
+
+  .j-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .j-container div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+
+  .jac {
+    width: 80%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    /* box-shadow: 5px 5px 10px #b8b8b8; */
+  }
+
+  .title {
+    width: 80%;
+    font-size: 14px;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: auto;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+  }
+
+  .right-b {
+    background-color: #00e2ff;
+    width: 85%;
+    height: 50px;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .left-b {
+    background-color: #00e2ff;
+    width: 85%;
+    height: 50px;
+    position: absolute;
+    top: 35.3%;
+    margin: 0 0 0 15%;
+    z-index: 1;
+  }
+
+  /*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+   margin:0 auto;
+   /* z-index: 3; */
+   margin-top: 40px;
+}
+
+.slider img {
+   width:100%;/*スライダー内の画像を横幅100%に*/
+   height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+   margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+   position: absolute;/*絶対配置にする*/
+   top: 42%;
+   cursor: pointer;/*マウスカーソルを指マークに*/
+   outline: none;/*クリックをしたら出てくる枠線を消す*/
+   border-top: 2px solid #666;/*矢印の色*/
+   border-right: 2px solid #666;/*矢印の色*/
+   height: 15px;
+   width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+   left: -1.5%;
+   transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+   right: -1.5%;
+   transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+   text-align:center;
+ margin:20px 0 0 0;
+}
+
+.slick-dots li {
+   display:inline-block;
+ margin:0 5px;
+}
+
+.slick-dots button {
+   color: transparent;
+   outline: none;
+   width:8px;/*ドットボタンのサイズ*/
+   height:8px;/*ドットボタンのサイズ*/
+   display:block;
+   border-radius:50%;
+   background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+   background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+  /* JACKET JACKET JACKET JACKET  */
+
+  .section-inner li {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #313131;
+    list-style-type: none;
+    margin: 5px 0;
+    font-feature-settings: "palt";
+  }
+
+  .section-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 50px;
+  }
+  .red {
+    color: #ff0b0d;
+    margin: auto 0;
+    font-size: 25px;
+  }
+
+  .section-title{
+    font-family: "Hiragino Mincho ProN";
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto 0;
+    font-feature-settings: "palt";
+    letter-spacing: 0.3rem;
+  }
+  
+  #開催概要{
+    transition: 1s;
+    transform: translateX(0px);
+    /* opacity: 0.1; */
+  }
+
+  #開催概要.on{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  #map{
+    margin: 0 0 50px;
+  }
+
+  #map iframe{
+  height: 360px;
+  width: 100%;
+  }
+
+  td{
+    font-feature-settings: "blwf";
+    letter-spacing: 0.1rem;
+  }
+
+  .table-name{
+    font-weight: bold;
+    margin: 10px auto 10px 0 ;
+    width: 30%;
+  }
+
+
+  .section-inner p {
+    font-feature-settings: "palt";
+    line-height: 1.75rem;
+    letter-spacing: 0.1rem;
+    margin: 0 0 60px;
+    text-align: left;
+  }
+
+  a.btn {
+    border: .5px #000000;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0;
+    background: rgb(238, 238, 238);
+    transition: 0.2s;
+    color: #2D011F;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+    box-shadow: 1px 1px 1px #606060;
+  }
+
+  a.btn:hover {
+    color: #fff;
+    background: #000;
+  }
+
+  .footerInner {
+    display: flex;
+    height: 180px;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+  /* .mirai{
+    text-align: center;
+    transition: 1s;
+    transform: translateX(300px);
+    opacity: 0.3;
+  }
+
+  .mirai.on{
+    transform: translateX(0px);
+    opacity: 0.8;
+  } */
+  .scroll_up {
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  .scroll_up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+  }
+}
+
