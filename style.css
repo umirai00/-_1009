@@ -11,7 +11,7 @@ body {
 }
 
 /* アウトライン可視化 */
-* {outline: 1px solid rgb(255, 202, 255);}
+/* * {outline: 1px solid rgb(255, 202, 255);} */
 
 @media screen and (min-width: 0px) {
   header {
