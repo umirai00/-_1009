@@ -11,36 +11,112 @@ body {
 }
 
 /* アウトライン可視化 */
-/* * {outline: 1px solid rgb(255, 202, 255);} */
+* {
+/*   outline: 1px solid rgb(255, 105, 198); */
+}
 
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 960px) {
+
+  .ticket {
+    text-align: center;
+  }
+
+  .ticket img{
+    /* text-align: center; */
+    /* max-width: 1100px; */
+    max-width: 1100px;
+  }
+
+  .section-pro-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    color: #FFFFFF;
+  }
+
+  .pro-card {
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0 #b8b8b8;
+    margin-top: 20px;
+  }
+
+  .pro-pic {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pro-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition-duration: 0.5s;
+  }
+  .pro-pic img:hover{
+    transform: scale(1.1);
+  }
+
+  .pro-name {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5rem;
+    text-align: center;
+    /* margin: auto; */
+    margin: 0;
+    margin-top: 5px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1rem;
+  }
+
+  .pro-text {
+    margin: 0;
+    padding: 10px 15px 15px;
+    font-size: 14px;
+  }
+
   .hikouki {
     /* transform: translateY(-1500px); */
-    transform: translate(1800px,-300px);
+    transform: translate(3000px, -280px);
     overflow: hidden;
   }
+
   body {
     overflow-x: hidden;
+    background-image: url(wbsite_bg_sky.jpg);
+    background-size: cover;
   }
-  
+
+  .info {
+    background-color: #ffffff;
+  }
+
   header {
     width: 100%;
     margin: auto;
     position: fixed;
     z-index: 2;
   }
+
   .header-inner {
-    background-color: rgb(154, 154, 154 0.5);
-    -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+    background-color: rgba(255, 255, 255, 1);
+    -webkit-backdrop-filter: blur(20px);
+    /* ぼかしエフェクト */
     backdrop-filter: blur(20px);
     box-shadow: 0 5px 10px rgba(255, 11, 13, .2);
     display: flex;
     justify-content: space-between;
   }
+
   .logo {
     height: 50px;
     margin: 10px 30px 5px 30px;
   }
+
   .jump {
     text-decoration: none;
     color: #000;
@@ -60,7 +136,7 @@ body {
     align-items: flex-end;
     margin: 0 0 8px 0;
   }
-  
+
   .glovalNav li {
     display: flex;
     margin: 0 15px 0px 15px;
@@ -89,6 +165,7 @@ body {
     position: relative;
     text-align: center;
   }
+
 
   h3 {
     text-align: center;
@@ -142,6 +219,7 @@ body {
   .left div {
     margin-right: 40px;
   }
+
   /* CONTENTS CONTENTS CONTENTS CONTENTS */
 
   /* PICTURES PICTURES PICTURES PICTURES */
@@ -207,13 +285,19 @@ body {
   }
 
   .title {
-    width: 80%;
+    /* width: 80%; */
     font-size: 14px;
+    font-weight: bold;
     line-height: 1.5rem;
     text-align: center;
     margin: auto;
     font-feature-settings: "palt";
     letter-spacing: 0.1rem;
+  }
+
+  .labtext {
+    margin: none;
+    font-size: 14px;
   }
 
   .right-b {
@@ -239,74 +323,88 @@ body {
   /*==================================================
 スライダーのためのcss
 ===================================*/
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width: 94%;
-   margin:0 auto;
-   /* z-index: 3; */
-   margin-top: 40px;
-}
+  .slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    /* width: 86%; */
+    max-width: 1100px;
+    margin: 0 auto;
+    /* z-index: 3; */
+    margin-top: 40px;
+  }
 
-.slider img {
-   width:100%;/*スライダー内の画像を横幅100%に*/
-   height:auto;
-}
+  .slider img {
+    width: 100%;
+    /*スライダー内の画像を横幅100%に*/
+    height: auto;
+  }
 
-/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 
-.slider .slick-slide {
-   margin:0 10px;
-}
+  .slider .slick-slide {
+    margin: 0 10px;
+  }
 
-/*矢印の設定*/
+  /*矢印の設定*/
 
-/*戻る、次へ矢印の位置*/
-.slick-prev, 
-.slick-next {
-   position: absolute;/*絶対配置にする*/
-   top: 42%;
-   cursor: pointer;/*マウスカーソルを指マークに*/
-   outline: none;/*クリックをしたら出てくる枠線を消す*/
-   border-top: 2px solid #666;/*矢印の色*/
-   border-right: 2px solid #666;/*矢印の色*/
-   height: 15px;
-   width: 15px;
-}
+  /*戻る、次へ矢印の位置*/
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;
+    /*矢印の色*/
+    border-right: 2px solid #666;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+  }
 
-.slick-prev {/*戻る矢印の位置と形状*/
-   left: -1.5%;
-   transform: rotate(-135deg);
-}
+  .slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+  }
 
-.slick-next {/*次へ矢印の位置と形状*/
-   right: -1.5%;
-   transform: rotate(45deg);
-}
+  .slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+  }
 
-/*ドットナビゲーションの設定*/
+  /*ドットナビゲーションの設定*/
 
-.slick-dots {
-   text-align:center;
- margin:20px 0 0 0;
-}
+  .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
 
-.slick-dots li {
-   display:inline-block;
- margin:0 5px;
-}
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
 
-.slick-dots button {
-   color: transparent;
-   outline: none;
-   width:8px;/*ドットボタンのサイズ*/
-   height:8px;/*ドットボタンのサイズ*/
-   display:block;
-   border-radius:50%;
-   background:#ccc;/*ドットボタンの色*/
-}
+  .slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+    /*ドットボタンの色*/
+  }
 
-.slick-dots .slick-active button{
-   background:#333;/*ドットボタンの現在地表示の色*/
-}
+  .slick-dots .slick-active button {
+    background: #333;
+    /*ドットボタンの現在地表示の色*/
+  }
 
   /* JACKET JACKET JACKET JACKET  */
 
@@ -326,13 +424,14 @@ body {
     justify-content: space-between;
     margin: 0 0 50px;
   }
+
   .red {
     color: #ff0b0d;
     margin: auto 0;
     font-size: 25px;
   }
 
-  .section-title{
+  .section-title {
     font-family: "Hiragino Mincho ProN";
     font-weight: bold;
     font-size: 20px;
@@ -340,35 +439,35 @@ body {
     font-feature-settings: "palt";
     letter-spacing: 0.3rem;
   }
-  
-  #開催概要{
+
+  #開催概要 {
     transition: 1s;
     transform: translateX(0px);
     /* opacity: 0.1; */
   }
 
-  #開催概要.on{
+  #開催概要.on {
     transform: translateX(0px);
     opacity: 1;
   }
 
-  #map{
+  #map {
     margin: 0 0 50px;
   }
 
-  #map iframe{
-  height: 360px;
-  width: 100%;
+  #map iframe {
+    height: 360px;
+    width: 100%;
   }
 
-  td{
+  td {
     font-feature-settings: "blwf";
     letter-spacing: 0.1rem;
   }
 
-  .table-name{
+  .table-name {
     font-weight: bold;
-    margin: 10px auto 10px 0 ;
+    margin: 10px auto 10px 0;
     width: 30%;
   }
 
@@ -426,9 +525,9 @@ body {
     transform: translateY(30px);
     opacity: 0;
   }
+
   .scroll_up.on {
     transform: translateY(0);
     opacity: 1.0;
   }
 }
-
