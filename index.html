@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div id="whole">
   <header>
     <div class="header-inner">
       <a href="#"><img class="logo" src="header logo.svg" alt="意匠展"></a>
@@ -34,7 +35,11 @@
     </div>
   </header>
 
-  <section class="section-wrapper" id="意匠展とは">
+  <div class="blank"></div>
+  <div class="blank"></div>
+  <div class="blank"></div>
+
+  <section class="section-wrapper-ishoten" id="意匠展とは">
     <section class="section-inner">
       <div class="section-title-container">
         <div class="red">■</div>
@@ -51,9 +56,15 @@
 
   <img class="hikouki" src="aircraft.png" alt="">
 
+  <div class="blank"></div>
+
   <div class="ticket">
     <img src="ticket.png" alt="">
   </div>
+  
+  <div class="blank"></div>
+  
+  <div class="info">
 
   <div class="section-wrapper" id="総合プロジェクト紹介"><h3>-総合プロジェクト紹介-</h3>
     <div class="section-pro-inner">
@@ -84,6 +95,8 @@
       </div>
     </div>
   </div>
+  
+  <div class="blank"></div>
 
 
   <!-- JACKET JACKET JACKET JACKET-->
@@ -106,7 +119,7 @@
       <img class="jac" src="lab4.png" alt="">
       <p class="title">人間情報科学研究室</p>
       <p class="labtext">人間情報科学研究室では、より人間特性に合致したヒューマンインタフェースの実現を目指し、
-        人間の多様な情報処理に関する諸問題について、生体工学やデジタル技術等を使い多視点から研究と提案を行う。</p>
+      人間の多様な情報処理に関する諸問題について、生体工学やデジタル技術等を使い多視点から研究と提案を行う。</p>
     </div>
     <div>
       <img class="jac" src="lab5.png" alt="">
@@ -144,7 +157,8 @@
     <div>
       <img class="jac" src="lab8.png" alt="">
       <p class="title">材料計画研究室</p>
-      <p class="labtext">あ</p>
+      <p class="labtext">材料が有している固有特性と属性との関係をデザイン科学の視点に立脚して研究し、
+        材料計画の観点から[モノ-ヒト-環境]系における新たな価値の創造を目指す。</p>
     </div>
     <div>
       <img class="jac" src="lab9.png" alt="">
@@ -165,7 +179,7 @@
 
   <!-- JACKET JACKET JACKET JACKET-->
 
-  <div class="info">
+  <div class="blank"></div>
 
   <section class="section-wrapper" id="開催概要">
     <section class="section-inner">
@@ -199,6 +213,7 @@
     </section>
   </section>
 
+  <div class="blank"></div>
 
   <section class="section-wrapper" id="事前予約">
     <section class="section-inner">
@@ -216,6 +231,8 @@
     </section>
   </section>
 
+  <div class="blank"></div>
+
   <section class="section-wrapper" id="合同卒展について">
     <section class="section-inner">
       <div class="section-title-container">
@@ -229,6 +246,8 @@
       <a href="" class="btn">合同卒展HPはこちら</a>
     </section>
   </section>
+
+  <div class="blank"></div>
 
   <section class="section-wrapper" id="協賛企業">
     <section class="section-inner">
@@ -255,9 +274,9 @@
       distance: "200px",
       duration: 1000
     });
-    ScrollReveal().reveal('.section-wrapper', { delay: 50, origin: "left" });
+    ScrollReveal().reveal('.section-wrapper-ishoten', { delay: 50, origin: "left", distance: "2000px" , duration: 1800, opacity:1, easing: 'linear'});
 
-    ScrollReveal().reveal('.hikouki', { delay: 50, origin: "left", distance: "3000px", duration: 5000, opacity:1 });
+    ScrollReveal().reveal('.hikouki', { delay: 50, origin: "left", distance: "2500px" , duration: 1800, opacity:1, easing: 'linear'});
 
     ScrollReveal().reveal('.header-inner', { delay: 500, origin: "top", reset: false });
 
@@ -269,6 +288,8 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="script.js"></script>
+
+</div>
 </body>
 
 </html>
