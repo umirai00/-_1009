@@ -655,7 +655,7 @@ body {
   
   /* ==== 5秒間スクロール禁止 ==== */
   body {
-    /* animation: scrollseal 0s 5s both; */
+    animation: scrollseal 0s 5s both;
   }
   
   header {
