@@ -1,684 +1,394 @@
-html {
-  scroll-behavior: smooth;
-}
+<!-- !で序文生成 -->
+<!DOCTYPE html>
+<html lang="ja">
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  /* overflow: hidden; */
-  scrollbar-width: none;
-}
+<head>
+  <meta charset="UTF-8">
 
-/* アウトライン可視化 */
-* {
-  outline: 1px solid rgb(12, 235, 255);
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>意匠展2023</title>
 
-@media screen and (min-width: 960px) {
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- これしないと全体的にmaginがかかったnomalize -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="icon" href="jacket1.jpg">
 
-  .blank {
-    padding: 150px;
-  }
+</head>
 
-  .ticket {
-    text-align: center;
-  }
-
-  .ticket img {
-    /* text-align: center; */
-    /* max-width: 1100px; */
-    max-width: 1100px;
-  }
-
-  .section-pro-inner {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    color: #FFFFFF;
-  }
-
-  .pro-card {
-    width: 500px;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 10px 0 #b8b8b8;
-    margin-top: 20px;
-  }
-
-  .pro-pic {
-    display: inline-block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  .pro-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition-duration: 0.5s;
-  }
-
-  .pro-pic img:hover {
-    transform: scale(1.1);
-  }
-
-  .pro-name {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5rem;
-    text-align: center;
-    /* margin: auto; */
-    margin: 0;
-    margin-top: 5px;
-    font-feature-settings: "palt";
-    letter-spacing: 0.1rem;
-  }
-
-  .pro-text {
-    margin: 0;
-    padding: 10px 15px 15px;
-    font-size: 14px;
-  }
-
-  .hikouki {
-    /* transform: translateY(-1500px); */
-    transform: translate(100vw, -200px);
-    overflow: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    background-image: url(wbsite_bg_sky.jpg);
-    background-size: cover;
-  }
-
-  .info {
-    background-color: #ffffff;
-  }
-
-  header {
-    width: 100%;
-    margin: auto;
-    position: fixed;
-    z-index: 2;
-  }
-
-  .header-inner {
-    background-color: rgba(255, 255, 255, 1);
-    -webkit-backdrop-filter: blur(20px);
-    /* ぼかしエフェクト */
-    backdrop-filter: blur(20px);
-    box-shadow: 0 5px 10px rgba(255, 11, 13, .2);
-    display: flex;
-    justify-content: space-between;
-    /* opacity: .5; */
-  }
-
-  .logo {
-    height: 50px;
-    margin: 10px 30px 5px 30px;
-  }
-
-  .jump {
-    text-decoration: none;
-    color: #000;
-  }
-
-  .jump_icon {
-    display: flex;
-    margin: 0 10px;
-  }
-
-  .sns_img {
-    height: 20px;
-  }
-
-  .glovalNav {
-    display: flex;
-    align-items: flex-end;
-    margin: 0 0 8px 0;
-  }
-
-  .glovalNav li {
-    display: flex;
-    margin: 0 15px 0px 15px;
-    font-weight: bold;
-    letter-spacing: 0.3rem;
-    font-size: 10px;
-    transition-duration: 0.5s;
-  }
-
-  .glovalNav li :hover {
-    /* background-color: #ff0b0d; */
-    /* color: #ffffff; */
-    opacity: .6;
-    scale: 1.1;
-  }
-
-  .section-wrapper {
-    height: 150vh;
-    padding: 15vh 0 0 0;
-    position: relative;
-  }
-
-  #研究室紹介 {
-    /* padding: 8vh 0 0 0; */
-  }
-
-  #意匠展とは {
-    padding: 18vh 0 0 0;
-    position:-webkit-sticky;
-    position: sticky;
-    top: 0;
-    /* padding-top: 200vw; */
-  }
-
-  /* .section-wrapper-ishoten {
-    padding: 1600px 0 0 0;
-    position: relative;
-  } */
-
-
-  .section-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-  }
-
-
-  h3 {
-    text-align: center;
-    font-feature-settings: "palt";
-    letter-spacing: 0.35rem;
-  }
-
-  /* CONTENTS CONTENTS CONTENTS CONTENTS */
-  .kashi {
-    box-shadow: 5px 5px 10px 0 #b8b8b8;
-    margin: 0 0 80px 0;
-    padding: 30px 20px;
-    position: relative;
-  }
-
-  h4 {
-    font-size: 17px;
-    font-family: serif;
-    margin: 0 0 100px 0;
-    font-feature-settings: "palt";
-    letter-spacing: 0.13rem;
-  }
-
-  h5 {
-    font-size: 12px;
-    margin: 0;
-    font-weight: lighter;
-    font-feature-settings: "palt";
-    letter-spacing: 0.13rem;
-    color: #353535;
-    line-height: 1.4;
-  }
-
-  .right {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .left {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .youtube {
-    aspect-ratio: 16 / 9;
-    height: 100%;
-    width: 500px;
-    height: 281px;
-  }
-
-  .left div {
-    margin-right: 40px;
-  }
-
-  /* CONTENTS CONTENTS CONTENTS CONTENTS */
-
-  /* PICTURES PICTURES PICTURES PICTURES */
-  .resize {
-    padding: 0 10%;
-  }
-
-  .font-size {
-    font-size: 0;
-  }
-
-  .pic {
-    display: inline-block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  .pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition-duration: 0.5s;
-  }
-
-  .pic img:hover {
-    transform: scale(1.2);
-  }
-
-  /* PICTURES PICTURES PICTURES PICTURES */
-  /* JACKET JACKET JACKET JACKET  */
-  .art {
-    display: flex;
-    border-radius: 100%;
-    margin: auto;
-    transition-duration: 0.5s;
-  }
-
-  .art:hover {
-    scale: 0.9;
-  }
-
-  .j-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .j-container div {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-    margin: 20px 0;
-  }
-
-  .jac {
-    width: 80%;
-    object-fit: cover;
-    margin: 0 auto 20px;
-    /* box-shadow: 5px 5px 10px #b8b8b8; */
-  }
-
-  .title {
-    /* width: 80%; */
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5rem;
-    text-align: center;
-    margin: auto;
-    font-feature-settings: "palt";
-    letter-spacing: 0.1rem;
-  }
-
-  .labtext {
-    margin: none;
-    font-size: 14px;
-  }
-
-  .right-b {
-    background-color: #00e2ff;
-    width: 85%;
-    height: 50px;
-    position: absolute;
-    top: 70%;
-    left: 0;
-    z-index: 1;
-  }
-
-  .left-b {
-    background-color: #00e2ff;
-    width: 85%;
-    height: 50px;
-    position: absolute;
-    top: 35.3%;
-    margin: 0 0 0 15%;
-    z-index: 1;
-  }
-
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="#"><img class="logo" src="header logo.svg" alt="意匠展"></a>
+      <nav class="glovalNav">
+        <li><a class="jump" href="#意匠展とは">意匠展とは</a></li>
+        <li><a class="jump" href="#コンセプト">コンセプト</a></li>
+        <li><a class="jump" href="#研究室紹介">研究室紹介</a></li>
+        <li><a class="jump" href="#開催概要">開催概要</a></li>
+        <li><a class="jump" href="#事前予約">事前予約</a></li>
+        <li><a class="jump" href="#合同卒展について">合同卒展について</a></li>
+        <li><a class="jump" href="#協賛企業">協賛企業</a></li>
+        <li><a class="jump_icon" href="https://note.com/ishoten2023/"><img class="sns_img" src="note_b.svg"
+              alt="youtube"></a></li>
+        <li><a class="jump_icon" href="https://twitter.com/ishoten2023"><img class="sns_img" src="twiiter_b.svg"
+              alt="twiiter"></a></li>
+        <li><a class="jump_icon" href="https://www.instagram.com/ishoten_2023/?hl=ja"><img class="sns_img"
+              src="instagram_b.svg" alt="instagram"></a></li>
+      </nav>
+    </div>
+  </header>
   
 
-  /*==================================================
-スライダーのためのcss
-===================================*/
-  .slider {
-    /*横幅94%で左右に余白を持たせて中央寄せ*/
-    /* width: 86%; */
-    /* max-width: 100%; */
-    margin: 0 auto;
-    /* z-index: 3; */
-    margin-top: 40px;
-    display: flex;
-  }
+  <section class="section-wrapper"></section>
 
-  .slider div {
-    width: 50vw;
-  }
+  <section class="section-wrapper" id="意匠展とは">
+    <img class="isho" src="意匠展とは(2).png" alt="">
+    <!-- <section class="section-inner"> -->
+    <!-- <div class="section-title-container">
+        <div class="red">■</div>
+        <div class="section-title">意匠展とは</div>
+        <div class="red">■</div>
+      </div> -->
+    <!-- <p>2022年度千葉大学工学部総合工学科デザインコース卒業生による卒業研究/制作展。
+        私たちは入学以来、デザインに関する様々な領域の基礎的な勉学に努めてまいりました。
+        学部4年次からは、各々の専門性を高めるために14の研究室に分かれ、研究や制作に打ち込んできました。
+        互いに影響しあい成長した私たちの成果を是非ご覧ください。
+      </p> -->
+    <!-- </section> -->
+  </section>
+  <!-- 
+  <img class="hikouki" src="aircraft.png" alt=""> -->
 
-  .slider img {
-    /* width: 100%; */
-    /*スライダー内の画像を横幅100%に*/
-    height: auto;
-  }
+  <div class="section-wrapper" id="コンセプト">
+    <!-- <div class="ticket">
+        <img src="ticket.png" alt="">
+      </div> -->
+  </div>
 
-  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+  <div class="info">
 
-  .slider .slick-slide {
-    margin: 0 10px;
-  }
+    <!-- <div class="section-wrapper" id="総合プロジェクト紹介">
+        <h3>-総合プロジェクト紹介-</h3>
+        <div class="section-pro-inner">
 
-  /*矢印の設定*/
+          <div>
+            <div class="pro-card">
+              <div class="pro-pic"><img src="pic1.jpg" alt=""></div>
+              <p class="pro-name">YAMAHA</p>
+              <p class="pro-text">テキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入る</p>
+            </div>
+            <div class="pro-card">
+              <div class="pro-pic"><img src="pic2.jpg" alt=""></div>
+              <p class="pro-name">観光</p>
+              <p class="pro-text">テキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入る</p>
+            </div>
+          </div>
+          <div>
+            <div class="pro-card">
+              <div class="pro-pic"><img src="pic3.jpg" alt=""></div>
+              <p class="pro-name">子供</p>
+              <p class="pro-text">テキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入る</p>
+            </div>
+            <div class="pro-card">
+              <div class="pro-pic"><img src="pic4.jpg" alt=""></div>
+              <p class="pro-name">植物</p>
+              <p class="pro-text">テキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入るテキストが入る</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
 
-  /*戻る、次へ矢印の位置*/
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    /*絶対配置にする*/
-    top: 42%;
-    cursor: pointer;
-    /*マウスカーソルを指マークに*/
-    outline: none;
-    /*クリックをしたら出てくる枠線を消す*/
-    border-top: 2px solid #666;
-    /*矢印の色*/
-    border-right: 2px solid #666;
-    /*矢印の色*/
-    height: 15px;
-    width: 15px;
-  }
+    <section class="section-wrapper" id="研究室紹介">
 
-  .slick-prev {
-    /*戻る矢印の位置と形状*/
-    left: -1.5%;
-    transform: rotate(-135deg);
-  }
+      <h3>-研究室 & 総合プロジェクト-</h3>
 
-  .slick-next {
-    /*次へ矢印の位置と形状*/
-    right: -1.5%;
-    transform: rotate(45deg);
-  }
+      <div class="tab_button">
 
-  /*ドットナビゲーションの設定*/
+        <input type="radio" id="lab1" name="contact" checked>
+        <label for="lab1"> <img class="bimg" src="tab.jpg"> </label>
 
-  .slick-dots {
-    text-align: center;
-    margin: 20px 0 0 0;
-  }
+        <input type="radio" id="lab2" name="contact">
+        <label for="lab2"> <img class="bimg" src="tab.jpg"> </label>
 
-  .slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
-  }
+        <input type="radio" id="lab3" name="contact">
+        <label for="lab3"> <img class="bimg" src="tab.jpg"> </label>
 
-  .slick-dots button {
-    color: transparent;
-    outline: none;
-    width: 8px;
-    /*ドットボタンのサイズ*/
-    height: 8px;
-    /*ドットボタンのサイズ*/
-    display: block;
-    border-radius: 50%;
-    background: #ccc;
-    /*ドットボタンの色*/
-  }
+        <input type="radio" id="lab4" name="contact">
+        <label for="lab4"> <img class="bimg" src="tab.jpg"> </label>
 
-  .slick-dots .slick-active button {
-    background: #333;
-    /*ドットボタンの現在地表示の色*/
-  }
+        <input type="radio" id="lab5" name="contact">
+        <label for="lab5"> <img class="bimg" src="tab.jpg"> </label>
 
-  /* JACKET JACKET JACKET JACKET  */
+        <input type="radio" id="lab6" name="contact">
+        <label for="lab6"> <img class="bimg" src="tab.jpg"> </label>
 
-  .section-inner li {
-    font-size: 14px;
-    text-align: center;
-    line-height: 1.5rem;
-    color: #313131;
-    list-style-type: none;
-    margin: 5px 0;
-    font-feature-settings: "palt";
-  }
+        <input type="radio" id="lab7" name="contact">
+        <label for="lab7"> <img class="bimg" src="tab.jpg"> </label>
 
-  .section-title-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 0 50px;
-  }
+        <input type="radio" id="lab8" name="contact">
+        <label for="lab8"> <img class="bimg" src="tab.jpg"> </label>
 
-  .red {
-    color: #ff0b0d;
-    margin: auto 0;
-    font-size: 25px;
-  }
+        <input type="radio" id="lab9" name="contact">
+        <label for="lab9"> <img class="bimg" src="tab.jpg"> </label>
 
-  .section-title {
-    font-family: "Hiragino Mincho ProN";
-    font-weight: bold;
-    font-size: 20px;
-    margin: auto 0;
-    font-feature-settings: "palt";
-    letter-spacing: 0.3rem;
-  }
+        <input type="radio" id="lab10" name="contact">
+        <label for="lab10"> <img class="bimg" src="tab.jpg"> </label>
 
-  #開催概要 {
-    transition: 1s;
-    transform: translateX(0px);
-    /* opacity: 0.1; */
-  }
+        <input type="radio" id="lab11" name="contact">
+        <label for="lab11"> <img class="bimg" src="tab.jpg"> </label>
 
-  #開催概要.on {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+        <input type="radio" id="lab12" name="contact">
+        <label for="lab12"> <img class="bimg" src="tab.jpg"> </label>
 
-  #map {
-    margin: 0 0 50px;
-  }
+        <input type="radio" id="lab13" name="contact">
+        <label for="lab13"> <img class="bimg" src="tab.jpg"> </label>
 
-  #map iframe {
-    height: 360px;
-    width: 100%;
-  }
+        <input type="radio" id="lab13" name="contact">
+        <label for="lab13"> <img class="bimg" src="tab.jpg"> </label>
 
-  td {
-    font-feature-settings: "blwf";
-    letter-spacing: 0.1rem;
-  }
+        <input type="radio" id="lab13" name="contact">
+        <label for="lab13"> <img class="bimg" src="tab.jpg"> </label>
 
-  .table-name {
-    font-weight: bold;
-    margin: 10px auto 10px 0;
-    width: 30%;
-  }
+        <input type="radio" id="lab13" name="contact">
+        <label for="lab13"> <img class="bimg" src="tab.jpg"> </label>
 
+        <input type="radio" id="lab13" name="contact">
+        <label for="lab13"> <img class="bimg" src="tab.jpg"> </label>
 
-  .section-inner p {
-    font-feature-settings: "palt";
-    line-height: 1.75rem;
-    letter-spacing: 0.1rem;
-    margin: 0 0 60px;
-    text-align: left;
-  }
+        <div class="tab_content" id="lab1_content">
+          <img src="l-lab.png" >
+        </div>
+        <div class="tab_content" id="lab2_content">
+          <img src="l-lab2.png" >
+        </div>
+        <div class="tab_content" id="lab3_content">
+          Lab3
+        </div>
+        <div class="tab_content" id="lab4_content">
+          Lab4
+        </div>
+        <div class="tab_content" id="lab5_content">
+          Lab5
+        </div>
+        <div class="tab_content" id="lab6_content">
+          Lab6
+        </div>
+        <div class="tab_content" id="lab7_content">
+          Lab7
+        </div>
+        <div class="tab_content" id="lab8_content">
+          Lab8
+        </div>
+        <div class="tab_content" id="lab9_content">
+          Lab9
+        </div>
+        <div class="tab_content" id="lab10_content">
+          Lab10
+        </div>
+        <div class="tab_content" id="lab11_content">
+          Lab11
+        </div>
+        <div class="tab_content" id="lab12_content">
+          Lab12
+        </div>
+        <div class="tab_content" id="lab13_content">
+          Lab13
+        </div>
 
-  a.btn {
-    border: .5px #000000;
-    padding: 20px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0;
-    background: rgb(238, 238, 238);
-    transition: 0.2s;
-    color: #2D011F;
-    font-feature-settings: "palt";
-    letter-spacing: 0.1rem;
-    box-shadow: 1px 1px 1px #606060;
-  }
-
-  a.btn:hover {
-    color: #fff;
-    background: #000;
-  }
-
-  .footerInner {
-    display: flex;
-    height: 180px;
-    flex-direction: column;
-    justify-content: end;
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-  }
-
-  /* .mirai{
-    text-align: center;
-    transition: 1s;
-    transform: translateX(300px);
-    opacity: 0.3;
-  }
-
-  .mirai.on{
-    transform: translateX(0px);
-    opacity: 0.8;
-  } */
-  .scroll_up {
-    transition: 0.8s ease-in-out;
-    transform: translateY(30px);
-    opacity: 0;
-  }
-
-  .scroll_up.on {
-    transform: translateY(0);
-    opacity: 1.0;
-  }
-
-  .isho {
-    width: 80%;
-    /* margin: auto; */
-    margin: 0 10vw 10vw 10vw;
-    /* max-width: 80vw; */
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  input {
-    display: none;
-  }
-
-  .tab_button {
-    /* padding: 100px; */
-    /* margin: auto; */
-    padding: 0 1% 0 1%;
-    /* width: 150%; */
-    /* overflow-x: scroll; */
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .tab_button .bimg{
-    /* width: 90%; */
-    /* opacity: .6; */
-    transition: .2s;
-    width: 5vw;
-    opacity: 1.0;
-  }
-
-  .tab_button .bimg:hover{
-    /* width: 90%; */
-    scale: 1.1;
-    transition: .2s;
-    /* opacity: .5; */
-  }
-
-  input[type="radio"]:checked + label .bimg {
-    /* background-color: rgb(82, 229, 185); */
-    scale: 1.2;
-    
-  }
+      </div>
 
 
-  .tab_content {
-    display: none;
-    position: absolute;
-    top: 25%;
-    left: 2%;
-    /* height: 100px; */
-  }
-  
-  #lab1:checked ~ #lab1_content,
-  #lab2:checked ~ #lab2_content,
-  #lab3:checked ~ #lab3_content,
-  #lab4:checked ~ #lab4_content,
-  #lab5:checked ~ #lab5_content,
-  #lab6:checked ~ #lab6_content,
-  #lab7:checked ~ #lab7_content,
-  #lab8:checked ~ #lab8_content,
-  #lab9:checked ~ #lab9_content,
-  #lab10:checked ~ #lab10_content,
-  #lab11:checked ~ #lab11_content,
-  #lab12:checked ~ #lab12_content,
-  #lab13:checked ~ #lab13_content {
-    display: block;
-  }
-  @keyframes scrollseal {
-    from {
-      overflow: hidden
-    }
-  
-    to {
-      overflow: visible
-    }
-  }
-  
-  @keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  
-  /* ==== 5秒間スクロール禁止 ==== */
-  body {
-    /* animation: scrollseal 0s 5s both; */
-  }
-  
-  header {
-    /* opacity: 0; */
-    animation: appear 5s 0s;
-  }
-  
-  body::-webkit-scrollbar {
-    display: none;
-    /* background-color: #000; */
-  }
-  
-  
-  /* .container {
-    width: 100%;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
-  }
-  
-  .container .section-wrapper{
-    height: 150vh;
-    scroll-snap-align: start;
-  } */
 
-}
+
+    </section>
+
+    <!-- <div class="kenkyu">
+        <input id="seihin" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="seihin">
+          <div>製品デザイン研究室</div>
+        </label>
+        <input id="sisupura" type="radio" name="tab_item">
+        <label class="tab_item" for="sisupura">
+          <div>システムプランニング研究室</div>
+        </label>
+        <input id="maneji" type="radio" name="tab_item">
+        <label class="tab_item" for="maneji">
+          <div>デザインマネージメント研究室</div>
+        </label>
+      </div> -->
+
+    <!-- <div class="slider">
+        <div>
+          <img class="jac" src="lab4.png" alt="">
+          <p class="title">コミュニケーションデザイン研究室</p>
+          <p class="labtext">コミュニケーションデザインは、デザインを通じてユーザーの意識や行動を変え、
+            魅力的な体験を生み出すことを目指す。
+            本研究室では、それらの表現技法、計画手法、評価方法について研究する。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab4.png" alt="">
+          <p class="title">人間情報科学研究室</p>
+          <p class="labtext">人間情報科学研究室では、より人間特性に合致したヒューマンインタフェースの実現を目指し、
+            人間の多様な情報処理に関する諸問題について、生体工学やデジタル技術等を使い多視点から研究と提案を行う。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab5.png" alt="">
+          <p class="title">システムプランニング研究室</p>
+          <p class="labtext">本研究室ではプロダクトやサービスをはじめ、多岐にわたるデザインを提案する。
+            産学協同研究のプロジェクトや海外ワークショップに参画し、より実践的なデザインワークを行う。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab6.png" alt="">
+          <p class="title">意匠形態学研究室</p>
+          <p class="labtext">意匠形態学研究室は、あらゆる「物」「事」について形態学的視点から分析的および
+            直感的アプローチを繰り返し、そのものの「すがた」「かたち」の意味について考察していく研究室である。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab4.png" alt="">
+          <p class="title">モビリティデザイン研究室</p>
+          <p class="labtext">本研究室はモビリティデザインを主とする研究室である。
+            生活の豊かさを目指し、交通や輸送機器に関する研究・開発を行い具体的なデザインのコンセプト・造形作品を提案する。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab5.png" alt="">
+          <p class="title">人間生活工学研究室</p>
+          <p class="labtext">あ</p>
+        </div>
+        <div>
+          <img class="jac" src="lab6.png" alt="">
+          <p class="title">サステナブルデザイン研究</p>
+          <p class="labtext">あ</p>
+        </div>
+        <div>
+          <img class="jac" src="lab7.png" alt="">
+          <p class="title">デザインマネージメント研究室</p>
+          <p class="labtext">あ</p>
+        </div>
+        <div>
+          <img class="jac" src="lab8.png" alt="">
+          <p class="title">材料計画研究室</p>
+          <p class="labtext">材料が有している固有特性と属性との関係をデザイン科学の視点に立脚して研究し、
+            材料計画の観点から[モノ-ヒト-環境]系における新たな価値の創造を目指す。</p>
+        </div>
+        <div>
+          <img class="jac" src="lab9.png" alt="">
+          <p class="title">コマーシャルデザイン研究室</p>
+          <p class="labtext">あ</p>
+        </div>
+        <div>
+          <img class="jac" src="lab10.png" alt="">
+          <p class="title">環境デザイン研究室</p>
+          <p class="labtext">あ</p>
+        </div>
+        <div>
+          <img class="jac" src="lab10.png" alt="">
+          <p class="title">コンテクスチュアルデザイン研究室</p>
+          <p class="labtext">あ</p>
+        </div>
+      </div> -->
+
+
+    <section class="section-wrapper" id="開催概要">
+      <section class="section-inner">
+        <div class="section-title-container">
+          <div class="red">■</div>
+          <div class="section-title">開催概要</div>
+          <div class="red">■</div>
+        </div>
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.715830146897!2d139.82138535178376!3d35.71054166099394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f5cad2ce885%3A0xd22bb354b71b3a80!2z5Y2D6JGJ5aSn5a2m5aKo55Sw44Kt44Oj44Oz44OR44K5!5e0!3m2!1sja!2sjp!4v1637150827541!5m2!1sja!2sjp"
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <table class="table" cellpadding="15" width="">
+          <tr>
+            <td class="table-name" align="left">会期</td>
+            <td class="table-body" align="left">2022年3月1日(水) - 3月7日(日) 11:00-19:00</td>
+          </tr>
+          <tr>
+            <td class="table-name" align="left">会場</td>
+            <td class="table-body" align="left">千葉大学墨田サテライトキャンパス<br>
+              〒131-0044 東京都墨田区文花 1-19-1
+            </td>
+          </tr>
+          <tr>
+            <td class="table-name" align="left">アクセス</td>
+            <td class="table-body" align="left">押上駅より徒歩16分 / 曳舟より徒歩16分 / 小村井より徒歩7分</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <section class="section-wrapper" id="事前予約">
+      <section class="section-inner">
+        <div class="section-title-container">
+          <div class="red">■</div>
+          <div class="section-title">事前予約</div>
+          <div class="red">■</div>
+        </div>
+        <p>本年度意匠展へのご来場を予定されている皆様には、コロナウイルス感染対策のため事前予約のご協力をお願いしております。
+          皆様には大変ご迷惑をお掛け致しますが、ご来場を心よりお待ちしております。
+          <br><br>
+          ご予約をされていない方も、当日枠としてご案内することができますが、混雑状況によりお待ちいただく場合がございます。事前予約は下記ボタンより事前予約の受付フォーム(RESERVA)に遷移し、「意匠展2021」の予約をしていただくようお願い致します。
+        </p>
+        <a href="" class="btn">事前予約フォームへ</a>
+      </section>
+    </section>
+    <section class="section-wrapper" id="合同卒展について">
+      <section class="section-inner">
+        <div class="section-title-container">
+          <div class="red">■</div>
+          <div class="section-title">合同卒展について</div>
+          <div class="red">■</div>
+        </div>
+        <p>「千葉大学合同卒業研究・制作展
+          2022」として、建築学コース・都市環境システム・環境造園学プログラムと同日程・同会場で展示会を開催しております。詳細は、下記ボタンをクリック後表示される「合同卒業研究・制作展HP」をご覧ください。<br><br>
+          ※予約フォームは「意匠展HP」「合同卒展HP」で同一のものになっておりますので、どちらからもご予約いただければ合同卒展全ての展示をご覧いただけます。</p>
+        <a href="" class="btn">合同卒展HPはこちら</a>
+      </section>
+    </section>
+
+    <section class="section-wrapper" id="協賛企業">
+      <section class="section-inner">
+        <div class="section-title-container">
+          <div class="red">■</div>
+          <div class="section-title">協賛企業</div>
+          <div class="red">■</div>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <div class="footerInner">
+        <small>千葉大学工学部総合工学科デザインコース卒業研究・制作展</small>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      reset: false,
+      distance: "200px",
+      duration: 1000
+    });
+    // ScrollReveal().reveal('.section-wrapper', { delay: 50, origin: "left"});
+
+    ScrollReveal().reveal('.hikouki', { delay: 50, origin: "left", distance: "2500px", duration: 1800, opacity: 1, easing: 'linear' });
+
+    // ScrollReveal().reveal('.header-inner', { delay: 500, origin: "top", reset: false });
+
+    // ScrollReveal().reveal('.jump, .jump_icon', { delay: 500, origin: "top", reset: false, interval: 100 });
+
+    ScrollReveal().reveal('.ticket', { delay: 1050, origin: "right", distance: "1000px", duration: 3000 });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
