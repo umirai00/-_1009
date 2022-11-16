@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+  body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -589,7 +589,7 @@ body {
 
   /* ==== 5秒間スクロール禁止 ==== */
   body {
-    /* animation: scrollseal 0s 5s both; */
+    animation: scrollseal 0s 5s both;
   }
 
   header {
@@ -1277,7 +1277,7 @@ input[type="radio"]:checked+label .bimg {
 
 /* ==== 5秒間スクロール禁止 ==== */
 body {
-  /* animation: scrollseal 0s 5s both; */
+  animation: scrollseal 0s 5s both;
 }
 
 header {
