@@ -14,7 +14,7 @@ html {
 
 /* アウトライン可視化 */
 * {
-  outline: 1px solid rgb(255, 12, 223);
+/*   outline: 1px solid rgb(255, 12, 223); */
 }
 
 body {
